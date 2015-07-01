@@ -1,8 +1,3 @@
-////////////////////////////////////////////////
-/*   Provided Code - Please Don't Edit   */
-////////////////////////////////////////////////
-'use strict';
-
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.")
     return prompt();
@@ -17,58 +12,32 @@ function randomPlay() {
         return "scissors";
     }
 }
-////////////////////////////////////////////////
-/*           Write Your Code Below            */
-////////////////////////////////////////////////
-
-function getPlayerMove(move) {
-<<<<<<< HEAD
-  return move || getInput();
-=======
-   return move || getInput()
->>>>>>> d7bce451eac376f16d1e96fe6de08095a1a6ba17
-}
-  
-function getComputerMove(move) {
-<<<<<<< HEAD
-     return move || randomPlay();
-=======
-    return move || randomPlay()
-}
-    
->>>>>>> d7bce451eac376f16d1e96fe6de08095a1a6ba17
-}
-
 function getWinner(playerMove,computerMove) {
     var winner;
     if (playerMove == 'rock' && computerMove == 'scissors') {
-        winner = 'Player'
-    
+        winner = 'Player';
     } else if (playerMove == 'scissors' && computerMove == 'paper') {
-        winner = 'Player'
-        
+        winner = 'Player';
     } else if (playerMove == 'paper' && computerMove == 'rock') {
-        winner = 'Player'
-        
+        winner = 'Player';
     } else if (playerMove == computerMove) {
-        winner = 'Tie'
-        
+        winner = 'Tie';
     } else {
-        winner = 'Computer'
+        winner = 'Computer';
     }
     return winner;
 }
-
 function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
     while (playerWins < 5 && computerWins < 5) {
-        getInput()
-        randomPlay()
-        getPlayerMove()
-        getComputerMove()
-        getWinner()
+        var winner = getWinner(getInput(), randomPlay())
+        if (winner === 'Player') {
+            playerWins++;
+        } else if (winner === 'Computer') {
+            computerWins++;
+        }
+    }    
     return [playerWins, computerWins];
 }
-
