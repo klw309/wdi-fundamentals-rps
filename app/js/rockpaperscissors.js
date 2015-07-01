@@ -22,11 +22,21 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
+<<<<<<< HEAD
   return move || getInput();
+=======
+   return move || getInput()
+>>>>>>> d7bce451eac376f16d1e96fe6de08095a1a6ba17
 }
   
 function getComputerMove(move) {
+<<<<<<< HEAD
      return move || randomPlay();
+=======
+    return move || randomPlay()
+}
+    
+>>>>>>> d7bce451eac376f16d1e96fe6de08095a1a6ba17
 }
 
 function getWinner(playerMove,computerMove) {
